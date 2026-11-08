@@ -1,0 +1,326 @@
+{
+  "fictional": true,
+  "description": "Invented training-program outcomes for the paper-review demonstration. No record represents a real person.",
+  "participants": [
+    {
+      "id": "example-001",
+      "completed_course": true
+    },
+    {
+      "id": "example-002",
+      "completed_course": true
+    },
+    {
+      "id": "example-003",
+      "completed_course": true
+    },
+    {
+      "id": "example-004",
+      "completed_course": true
+    },
+    {
+      "id": "example-005",
+      "completed_course": true
+    },
+    {
+      "id": "example-006",
+      "completed_course": true
+    },
+    {
+      "id": "example-007",
+      "completed_course": true
+    },
+    {
+      "id": "example-008",
+      "completed_course": true
+    },
+    {
+      "id": "example-009",
+      "completed_course": true
+    },
+    {
+      "id": "example-010",
+      "completed_course": true
+    },
+    {
+      "id": "example-011",
+      "completed_course": true
+    },
+    {
+      "id": "example-012",
+      "completed_course": true
+    },
+    {
+      "id": "example-013",
+      "completed_course": true
+    },
+    {
+      "id": "example-014",
+      "completed_course": true
+    },
+    {
+      "id": "example-015",
+      "completed_course": true
+    },
+    {
+      "id": "example-016",
+      "completed_course": true
+    },
+    {
+      "id": "example-017",
+      "completed_course": true
+    },
+    {
+      "id": "example-018",
+      "completed_course": true
+    },
+    {
+      "id": "example-019",
+      "completed_course": true
+    },
+    {
+      "id": "example-020",
+      "completed_course": true
+    },
+    {
+      "id": "example-021",
+      "completed_course": true
+    },
+    {
+      "id": "example-022",
+      "completed_course": true
+    },
+    {
+      "id": "example-023",
+      "completed_course": true
+    },
+    {
+      "id": "example-024",
+      "completed_course": true
+    },
+    {
+      "id": "example-025",
+      "completed_course": true
+    },
+    {
+      "id": "example-026",
+      "completed_course": true
+    },
+    {
+      "id": "example-027",
+      "completed_course": true
+    },
+    {
+      "id": "example-028",
+      "completed_course": true
+    },
+    {
+      "id": "example-029",
+      "completed_course": true
+    },
+    {
+      "id": "example-030",
+      "completed_course": true
+    },
+    {
+      "id": "example-031",
+      "completed_course": true
+    },
+    {
+      "id": "example-032",
+      "completed_course": true
+    },
+    {
+      "id": "example-033",
+      "completed_course": true
+    },
+    {
+      "id": "example-034",
+      "completed_course": true
+    },
+    {
+      "id": "example-035",
+      "completed_course": true
+    },
+    {
+      "id": "example-036",
+      "completed_course": true
+    },
+    {
+      "id": "example-037",
+      "completed_course": true
+    },
+    {
+      "id": "example-038",
+      "completed_course": true
+    },
+    {
+      "id": "example-039",
+      "completed_course": true
+    },
+    {
+      "id": "example-040",
+      "completed_course": true
+    },
+    {
+      "id": "example-041",
+      "completed_course": true
+    },
+    {
+      "id": "example-042",
+      "completed_course": true
+    },
+    {
+      "id": "example-043",
+      "completed_course": true
+    },
+    {
+      "id": "example-044",
+      "completed_course": true
+    },
+    {
+      "id": "example-045",
+      "completed_course": true
+    },
+    {
+      "id": "example-046",
+      "completed_course": true
+    },
+    {
+      "id": "example-047",
+      "completed_course": true
+    },
+    {
+      "id": "example-048",
+      "completed_course": true
+    },
+    {
+      "id": "example-049",
+      "completed_course": false
+    },
+    {
+      "id": "example-050",
+      "completed_course": false
+    },
+    {
+      "id": "example-051",
+      "completed_course": false
+    },
+    {
+      "id": "example-052",
+      "completed_course": false
+    },
+    {
+      "id": "example-053",
+      "completed_course": false
+    },
+    {
+      "id": "example-054",
+      "completed_course": false
+    },
+    {
+      "id": "example-055",
+      "completed_course": false
+    },
+    {
+      "id": "example-056",
+      "completed_course": false
+    },
+    {
+      "id": "example-057",
+      "completed_course": false
+    },
+    {
+      "id": "example-058",
+      "completed_course": false
+    },
+    {
+      "id": "example-059",
+      "completed_course": false
+    },
+    {
+      "id": "example-060",
+      "completed_course": false
+    },
+    {
+      "id": "example-061",
+      "completed_course": false
+    },
+    {
+      "id": "example-062",
+      "completed_course": false
+    },
+    {
+      "id": "example-063",
+      "completed_course": false
+    },
+    {
+      "id": "example-064",
+      "completed_course": false
+    },
+    {
+      "id": "example-065",
+      "completed_course": false
+    },
+    {
+      "id": "example-066",
+      "completed_course": false
+    },
+    {
+      "id": "example-067",
+      "completed_course": false
+    },
+    {
+      "id": "example-068",
+      "completed_course": false
+    },
+    {
+      "id": "example-069",
+      "completed_course": false
+    },
+    {
+      "id": "example-070",
+      "completed_course": false
+    },
+    {
+      "id": "example-071",
+      "completed_course": false
+    },
+    {
+      "id": "example-072",
+      "completed_course": false
+    },
+    {
+      "id": "example-073",
+      "completed_course": false
+    },
+    {
+      "id": "example-074",
+      "completed_course": false
+    },
+    {
+      "id": "example-075",
+      "completed_course": false
+    },
+    {
+      "id": "example-076",
+      "completed_course": false
+    },
+    {
+      "id": "example-077",
+      "completed_course": null
+    },
+    {
+      "id": "example-078",
+      "completed_course": null
+    },
+    {
+      "id": "example-079",
+      "completed_course": null
+    },
+    {
+      "id": "example-080",
+      "completed_course": null
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper review"
+  short_description: "Audit manuscripts and create actionable PDF/HTML reports"
+  default_prompt: "Use $paper-review to review this paper and produce a report with current wording, proposed revisions, implementation options, and reproduced statistical checks."

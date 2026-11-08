@@ -1,0 +1,57 @@
+@page {size:Letter; margin:.65in .65in .7in}
+:root {--ink:#1d2433;--muted:#5b6475;--rule:#d9dde5;--navy:#1f3a68;
+ --del:#fde2e2;--delink:#a1262d;--ins:#dcf3e3;--insink:#16663a;--paper:#f7f8fa}
+* {box-sizing:border-box}
+body {font-family:'Linux Libertine O','Tinos',Georgia,serif;color:var(--ink);
+ font-size:10.6pt;line-height:1.38;margin:0;background:white}
+main {max-width:980px;margin:auto;padding:34px 30px 58px}
+h1,h2,h3,h4,.meta,.label,.where,.pill,.steps,.options,th,.condition,.tabletitle {
+ font-family:Inter,Arial,sans-serif}
+h1 {font-size:23pt;line-height:1.15;margin:0 0 8pt;color:var(--navy);letter-spacing:-.3pt}
+.meta {font-size:8.4pt;color:var(--muted);line-height:1.5;margin:0 0 9pt}
+.legend {font-family:Inter,Arial,sans-serif;font-size:8pt;margin:4pt 0 15pt;color:var(--muted)}
+article.issue {padding:13pt 0 15pt;border-top:1px solid var(--rule)}
+.itemhead {display:flex;gap:8pt;align-items:baseline;break-after:avoid}
+.check {display:inline-flex;flex:0 0 10pt;width:10pt;height:10pt;border:1.2px solid #40536d;border-radius:2px;
+ align-items:center;justify-content:center;font:700 9pt/1 Inter,Arial,sans-serif}
+.check[data-state="selected"] {color:var(--insink);border-color:var(--insink);background:var(--ins)}
+.check[data-state="discuss"] {color:#805900;border-color:#a57c22;background:#fff1d6}
+h2 {font-size:13pt;line-height:1.35;color:var(--navy);margin:0 0 4pt;break-after:avoid}
+.pill {display:inline-block;font-size:6.7pt;font-weight:600;letter-spacing:.25pt;
+ text-transform:uppercase;vertical-align:1pt;padding:2pt 5pt;border-radius:9pt;margin-left:6pt;white-space:nowrap}
+.pill.fix {background:#fbe3e1;color:#9b2720}.pill.decision {background:#e1ebfb;color:#1f4b99}
+.pill.confirm {background:#fff1d6;color:#805900}.pill.package {background:#e5eaf0;color:#465d79}
+.where {font-size:8.2pt;line-height:1.45;color:var(--muted);margin:2pt 0 8pt;break-after:avoid}
+.label {font-size:7.2pt;font-weight:650;letter-spacing:.35pt;text-transform:uppercase;
+ color:var(--muted);margin:0 0 4pt}
+.context,.proposal {padding:7pt 10pt;margin:7pt 0;border-left:3px solid #adb8c8;
+ background:var(--paper);break-inside:avoid}
+.proposal {background:#f3faf5;border-left-color:var(--insink)}
+.proposal .label {color:var(--insink)}
+.condition {font-size:8pt;line-height:1.4;color:#805900;background:#fff7e7;
+ padding:5pt 7pt;margin:3pt 0 7pt;border-left:2px solid #c5a35a;break-inside:avoid;break-after:avoid}
+.source {font-family:Inter,Arial,sans-serif;font-size:7.3pt;color:var(--muted);margin-top:4pt}
+.context p,.proposal p {margin:0}.why p {margin:7pt 0}
+h3 {font-size:9.4pt;color:var(--navy);margin:13pt 0 5pt;break-after:avoid}
+h4 {font-size:8.5pt;line-height:1.4;margin:9pt 0 4pt;color:var(--navy);break-after:avoid}
+del {background:var(--del);color:var(--delink);text-decoration:line-through;
+ text-decoration-thickness:1px;border-radius:2px;padding:0 1px}
+ins {background:var(--ins);color:var(--insink);text-decoration:none;border-radius:2px;
+ padding:0 1px;font-weight:600}
+.options {margin:6pt 0 10pt;font-size:8.8pt;line-height:1.45}
+.option {display:block;border-left:2px solid var(--rule);padding:5pt 9pt;margin:6pt 0;break-inside:avoid}
+.option strong {font-size:8.8pt}.option p,.option-description {display:block;margin:4pt 0 0}
+.choice {display:inline-block;width:8pt;height:8pt;border:1px solid #58677b;border-radius:50%;margin-right:5pt}
+.steps {font-size:8.7pt;line-height:1.5;margin:5pt 0 0;padding-left:17pt}
+.steps li {padding-left:2pt;margin:4pt 0;break-inside:avoid}
+.tableblock {margin:9pt 0 11pt;break-inside:avoid}
+table.data {border-collapse:collapse;width:100%;font-size:9.1pt;line-height:1.3;margin:4pt 0}
+table.data th {text-align:left;font-size:7.2pt;font-weight:650;letter-spacing:.15pt;
+ color:var(--muted);border-bottom:1.4px solid var(--navy);padding:4pt 5pt;vertical-align:bottom}
+table.data td {padding:4pt 5pt;border-bottom:1px solid var(--rule);vertical-align:top}
+.tablenote {font-family:Inter,Arial,sans-serif;font-size:7.6pt;line-height:1.45;color:var(--muted);margin:5pt 0}
+.value-note {font-family:Inter,Arial,sans-serif;font-size:8pt;line-height:1.45;color:var(--muted)}
+@media print {main{padding:0;max-width:none}h1{font-size:20pt}
+ article.issue{padding:11pt 0 12pt}p{orphans:3;widows:3}}
+@media(max-width:650px){main{padding:24px 16px}h1{font-size:24px}h2{font-size:18px}
+ .tableblock{overflow-x:auto}table.data{min-width:520px}.pill{margin-left:0;margin-top:3pt}}

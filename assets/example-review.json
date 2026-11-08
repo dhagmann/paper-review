@@ -1,0 +1,108 @@
+{
+  "title": "Hypothetical training-program study — proposed manuscript edits",
+  "subtitle": "Illustrative sample. All participants, data and manuscript quotations are fictional.",
+  "sources": {
+    "draft": {
+      "label": "Fictional manuscript",
+      "path": "example-source.txt"
+    }
+  },
+  "issues": [
+    {
+      "id": "EX01",
+      "title": "Four missing outcomes are being counted as known noncompletion",
+      "location": "Participants and Results, page 1",
+      "status": "Analysis decision",
+      "quotes": [
+        {
+          "source": "draft",
+          "page": 1,
+          "text": "Follow-up outcomes were observed for all 80 recruited students."
+        },
+        {
+          "source": "draft",
+          "page": 1,
+          "text": "Forty-eight students completed the course (60.0%), while the remaining 32 did not complete it."
+        }
+      ],
+      "explanation": [
+        "The fictional dataset contains 80 recruited students, but only 76 have a recorded follow-up outcome: 48 completed the course and 28 did not. Four outcomes are missing. The original calculation counts every value other than an observed completion as noncompletion, turning those four unknown outcomes into four additional failures.",
+        "The denominator depends on the question being answered. Among students with a recorded outcome, completion is 48/76 = 63.2%. Among everyone recruited, documented completion is 48/80 = 60.0%. Both are useful descriptions, but 60.0% does not establish that the other 40.0% failed. If all four missing students completed the course, actual completion across the full cohort would be 65.0%; if none did, it would be 60.0%."
+      ],
+      "tables": [
+        {
+          "title": "What the fictional records establish",
+          "headers": [
+            "Follow-up status",
+            "Students",
+            "Share of all 80 recruits"
+          ],
+          "rows": [
+            [
+              "Known completion",
+              "48",
+              "60.0%"
+            ],
+            [
+              "Known noncompletion",
+              "28",
+              "35.0%"
+            ],
+            [
+              "Outcome missing",
+              "4",
+              "5.0%"
+            ]
+          ],
+          "note": "There are 76 observed outcomes. The observed-outcome completion rate is 63.2%; completion across all recruits is bounded between 60.0% and 65.0% without additional information."
+        }
+      ],
+      "options": [
+        {
+          "label": "A. Report completion among students with observed outcomes",
+          "recommended": true,
+          "description": "Use 76 as the denominator for the observed-outcome rate, keep 80 as the recruitment total, and disclose the four missing outcomes. Do not generalize 63.2% to all recruits without an assumption about missingness.",
+          "id": "observed-outcomes"
+        },
+        {
+          "label": "B. Describe documented completion across all recruits",
+          "description": "Keep 80 as the denominator and report all three statuses separately. Call 60.0% documented completion, with four outcomes unknown. To estimate actual completion for the entire cohort, recover the missing records or state the 60.0%–65.0% bounds.",
+          "id": "documented-cohort"
+        }
+      ],
+      "edits": [
+        {
+          "quote": 0,
+          "label": "Participants — replace the complete-record claim under either option",
+          "text": "Follow-up outcomes were observed for 76 of the 80 recruited students.",
+          "id": "participants-count"
+        },
+        {
+          "quote": 1,
+          "label": "Results — completion among observed outcomes",
+          "condition": "Option A: use the 76 observed outcomes as the denominator.",
+          "text": "Among the 76 students with recorded outcomes, 48 completed the course (63.2%) and 28 did not (36.8%). Four of the 80 recruited students had no recorded follow-up outcome.",
+          "id": "results-observed",
+          "option_ids": [
+            "observed-outcomes"
+          ]
+        },
+        {
+          "quote": 1,
+          "label": "Results — documented completion across the recruited cohort",
+          "condition": "Option B: keep all 80 recruits in the denominator and distinguish unknown outcomes.",
+          "text": "Among all 80 recruited students, 48 had documented course completion (60.0%), 28 had documented noncompletion (35.0%), and four had no recorded follow-up outcome (5.0%). Actual completion across the full cohort was therefore between 60.0% and 65.0%.",
+          "id": "results-cohort",
+          "option_ids": [
+            "documented-cohort"
+          ]
+        }
+      ],
+      "steps": [
+        "Preserve a missing follow-up value as missing. Code known completion and known noncompletion separately; do not turn an unobserved outcome into a known failure.",
+        "Choose which descriptive question the Results paragraph answers and use the corresponding complete replacement. The Participants correction applies under either option.",
+        "Use the same denominator and missingness description in the abstract, tables and figures. If the goal is actual completion across all recruits, seek the missing outcomes or report the bounds."
+      ]
+    }
+  ]
+}

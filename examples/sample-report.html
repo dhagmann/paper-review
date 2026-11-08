@@ -1,0 +1,542 @@
+<!doctype html><html lang="en"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hypothetical training-program study — proposed manuscript edits</title><style>@page {size:Letter; margin:.65in .65in .7in}
+:root {--ink:#1d2433;--muted:#5b6475;--rule:#d9dde5;--navy:#1f3a68;
+ --del:#fde2e2;--delink:#a1262d;--ins:#dcf3e3;--insink:#16663a;--paper:#f7f8fa}
+* {box-sizing:border-box}
+body {font-family:'Linux Libertine O','Tinos',Georgia,serif;color:var(--ink);
+ font-size:10.6pt;line-height:1.38;margin:0;background:white}
+main {max-width:980px;margin:auto;padding:34px 30px 58px}
+h1,h2,h3,h4,.meta,.label,.where,.pill,.steps,.options,th,.condition,.tabletitle {
+ font-family:Inter,Arial,sans-serif}
+h1 {font-size:23pt;line-height:1.15;margin:0 0 8pt;color:var(--navy);letter-spacing:-.3pt}
+.meta {font-size:8.4pt;color:var(--muted);line-height:1.5;margin:0 0 9pt}
+.legend {font-family:Inter,Arial,sans-serif;font-size:8pt;margin:4pt 0 15pt;color:var(--muted)}
+article.issue {padding:13pt 0 15pt;border-top:1px solid var(--rule)}
+.itemhead {display:flex;gap:8pt;align-items:baseline;break-after:avoid}
+.check {display:inline-flex;flex:0 0 10pt;width:10pt;height:10pt;border:1.2px solid #40536d;border-radius:2px;
+ align-items:center;justify-content:center;font:700 9pt/1 Inter,Arial,sans-serif}
+.check[data-state="selected"] {color:var(--insink);border-color:var(--insink);background:var(--ins)}
+.check[data-state="discuss"] {color:#805900;border-color:#a57c22;background:#fff1d6}
+h2 {font-size:13pt;line-height:1.35;color:var(--navy);margin:0 0 4pt;break-after:avoid}
+.pill {display:inline-block;font-size:6.7pt;font-weight:600;letter-spacing:.25pt;
+ text-transform:uppercase;vertical-align:1pt;padding:2pt 5pt;border-radius:9pt;margin-left:6pt;white-space:nowrap}
+.pill.fix {background:#fbe3e1;color:#9b2720}.pill.decision {background:#e1ebfb;color:#1f4b99}
+.pill.confirm {background:#fff1d6;color:#805900}.pill.package {background:#e5eaf0;color:#465d79}
+.where {font-size:8.2pt;line-height:1.45;color:var(--muted);margin:2pt 0 8pt;break-after:avoid}
+.label {font-size:7.2pt;font-weight:650;letter-spacing:.35pt;text-transform:uppercase;
+ color:var(--muted);margin:0 0 4pt}
+.context,.proposal {padding:7pt 10pt;margin:7pt 0;border-left:3px solid #adb8c8;
+ background:var(--paper);break-inside:avoid}
+.proposal {background:#f3faf5;border-left-color:var(--insink)}
+.proposal .label {color:var(--insink)}
+.condition {font-size:8pt;line-height:1.4;color:#805900;background:#fff7e7;
+ padding:5pt 7pt;margin:3pt 0 7pt;border-left:2px solid #c5a35a;break-inside:avoid;break-after:avoid}
+.source {font-family:Inter,Arial,sans-serif;font-size:7.3pt;color:var(--muted);margin-top:4pt}
+.context p,.proposal p {margin:0}.why p {margin:7pt 0}
+h3 {font-size:9.4pt;color:var(--navy);margin:13pt 0 5pt;break-after:avoid}
+h4 {font-size:8.5pt;line-height:1.4;margin:9pt 0 4pt;color:var(--navy);break-after:avoid}
+del {background:var(--del);color:var(--delink);text-decoration:line-through;
+ text-decoration-thickness:1px;border-radius:2px;padding:0 1px}
+ins {background:var(--ins);color:var(--insink);text-decoration:none;border-radius:2px;
+ padding:0 1px;font-weight:600}
+.options {margin:6pt 0 10pt;font-size:8.8pt;line-height:1.45}
+.option {display:block;border-left:2px solid var(--rule);padding:5pt 9pt;margin:6pt 0;break-inside:avoid}
+.option strong {font-size:8.8pt}.option p,.option-description {display:block;margin:4pt 0 0}
+.choice {display:inline-block;width:8pt;height:8pt;border:1px solid #58677b;border-radius:50%;margin-right:5pt}
+.steps {font-size:8.7pt;line-height:1.5;margin:5pt 0 0;padding-left:17pt}
+.steps li {padding-left:2pt;margin:4pt 0;break-inside:avoid}
+.tableblock {margin:9pt 0 11pt;break-inside:avoid}
+table.data {border-collapse:collapse;width:100%;font-size:9.1pt;line-height:1.3;margin:4pt 0}
+table.data th {text-align:left;font-size:7.2pt;font-weight:650;letter-spacing:.15pt;
+ color:var(--muted);border-bottom:1.4px solid var(--navy);padding:4pt 5pt;vertical-align:bottom}
+table.data td {padding:4pt 5pt;border-bottom:1px solid var(--rule);vertical-align:top}
+.tablenote {font-family:Inter,Arial,sans-serif;font-size:7.6pt;line-height:1.45;color:var(--muted);margin:5pt 0}
+.value-note {font-family:Inter,Arial,sans-serif;font-size:8pt;line-height:1.45;color:var(--muted)}
+@media print {main{padding:0;max-width:none}h1{font-size:20pt}
+ article.issue{padding:11pt 0 12pt}p{orphans:3;widows:3}}
+@media(max-width:650px){main{padding:24px 16px}h1{font-size:24px}h2{font-size:18px}
+ .tableblock{overflow-x:auto}table.data{min-width:520px}.pill{margin-left:0;margin-top:3pt}}
+
+/* Review controls share the report's navy, gray and green palette. */
+.interactive-only,.review-print-note,.print-selection-label {display:none}
+.review-ready .interactive-only {display:block}
+.review-ready .review-toolbar {display:flex}
+.review-toolbar {position:sticky;top:8px;z-index:5;gap:10px 14px;flex-wrap:wrap;
+ background:white;border:1px solid var(--rule);border-top:3px solid var(--navy);
+ padding:12px 14px;margin:12px 0 15px;font:12px/1.45 Inter,Arial,sans-serif;
+ box-shadow:0 3px 10px #1f3a6810}
+.toolbar-heading {display:flex;gap:12px;align-items:center;flex:1 1 180px;color:var(--navy)}
+.toolbar-heading strong {font-size:15px}.review-progress {font-size:11px;color:var(--muted)}
+.toolbar-actions {display:flex;gap:7px;flex-wrap:wrap}
+.review-toolbar button,.proposal-controls button,.clear-option {
+ font:600 11px/1.3 Inter,Arial,sans-serif;border:1px solid #aeb9ca;border-radius:3px;
+ padding:7px 9px;background:white;color:var(--navy);cursor:pointer}
+.review-toolbar .primary {background:var(--navy);border-color:var(--navy);color:white}
+.review-toolbar button:hover,.proposal-controls button:hover,.clear-option:hover {background:#edf2f8}
+.review-toolbar .primary:hover {background:#142d55}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible {
+ outline:2px solid #2e69a7;outline-offset:3px}
+.review-message {flex:1 1 380px;color:var(--muted);margin:0;font-size:11px}
+.review-message[data-tone="error"] {color:#9b2720;font-weight:600}
+.discussion-details textarea {
+ border:1px solid #adb8c8;border-radius:3px;padding:6px 8px;color:var(--ink);
+ background:white;font:12px/1.45 Inter,Arial,sans-serif}
+.review-ready .option-heading {display:flex;align-items:baseline;gap:5px;cursor:pointer}
+.review-ready .option[data-option-id] {cursor:pointer}
+.review-ready .option[data-option-id]:hover:not(.selected) {outline:1px solid #adb8c8;outline-offset:0}
+.review-ready .option[data-option-id]:focus-within {outline:2px solid #2e69a7;outline-offset:2px}
+.option-radio,.discussion-radio {accent-color:var(--navy);margin:0 4px 0 0;transform:translateY(1px)}
+.review-ready .option-radio {display:inline-block}
+.review-ready .choice {display:none}
+.option.selected {border-left:3px solid var(--navy);background:#eaf1fb}
+.option-heading {font-weight:600}
+.clear-option {padding:3px 6px;margin:0 0 4px;font-size:10px}
+.review-ready .proposal-controls {display:flex}
+.proposal-controls {align-items:center;gap:8px;flex-wrap:wrap;margin:10px 0 0;
+ font:11px/1.4 Inter,Arial,sans-serif;color:var(--navy)}
+.proposal-controls label {display:flex;align-items:center;gap:5px;margin-right:auto}
+.proposal-controls input {accent-color:var(--insink)}
+.proposal-controls button {padding:4px 7px;font-size:10px}
+.wording-state {font-weight:600;color:var(--insink)}
+.wording-editor {width:100%;min-height:90px;resize:vertical;border:1px solid #629579;
+ padding:9px;color:var(--ink);background:white;font:inherit;line-height:1.5;margin:5px 0}
+.discussion-option {border-left-style:dashed}
+.discussion-details {margin-top:10px;font:12px/1.5 Inter,Arial,sans-serif}
+.discussion-details label {font-weight:600;color:var(--navy)}
+.discussion-details textarea {display:block;width:100%;resize:vertical;margin:6px 0 0;min-height:80px}
+.legacy-decision-note {font-size:11px;color:var(--muted)}
+.issue-conflicts {color:#9b2720;font:11px/1.5 Inter,Arial,sans-serif;margin:8px 0 0}
+.review-print-note {font:8.5pt/1.5 Inter,Arial,sans-serif;border-left:2px solid var(--navy);
+ padding:6pt 9pt;margin:8pt 0;white-space:pre-wrap;break-inside:avoid}
+.toolbar-navigation {display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.issue-navigation {border-top:2px solid var(--navy);border-bottom:1px solid var(--rule);
+ margin:22px 0 24px;padding:14px 0;font-family:Inter,Arial,sans-serif}
+.issue-navigation h2 {font-size:18px;margin:0 0 6px}
+.index-legend {color:var(--muted);font-size:12px;margin:0 0 8px}
+.issue-index-link {display:flex;gap:10px;align-items:baseline;width:100%;text-align:left;
+ border:0;border-radius:0;border-bottom:1px solid var(--rule);padding:8px;
+ background:white;cursor:pointer;font:400 14px/1.45 Inter,Arial,sans-serif;color:var(--ink)}
+.issue-index-link:last-child {border-bottom:0}
+.issue-index-link:hover {background:#f3f5f8}
+.issue-index-link .index-title {flex:1}
+.index-number {font-weight:600;color:var(--navy);min-width:18px}
+.review-toolbar button:disabled {cursor:default;opacity:.5}
+.wording-heading {display:flex;gap:12px;align-items:baseline;justify-content:space-between;flex-wrap:wrap}
+.review-ready .wording-tools {display:flex;gap:7px;flex-wrap:wrap}
+.wording-tools button {font:600 12px/1.4 Inter,Arial,sans-serif;border:1px solid #aeb9ca;
+ border-radius:3px;padding:6px 9px;background:white;color:var(--navy);cursor:pointer}
+.wording-tools button:hover {background:#edf2f8}
+.wording-tools button[aria-pressed="true"] {background:var(--navy);color:white;border-color:var(--navy)}
+.wording-focus-note {font:12px/1.5 Inter,Arial,sans-serif;color:var(--muted);margin:0 0 8px}
+.wording-focus-note:empty {display:none}
+.comparison-current {display:none}
+.proposal-group {margin:9px 0;break-inside:avoid}
+[tabindex="-1"]:focus-visible {outline:2px solid #2e69a7;outline-offset:4px}
+@media screen {
+ body {font-size:16px;line-height:1.55}
+ h1 {font-size:32px}h2 {font-size:21px}h3 {font-size:17px}h4 {font-size:15px}
+ .meta,.where {font-size:13px}.legend {font-size:12px}.label {font-size:12px}
+ .source {font-size:12px}.pill {font-size:10px}.condition {font-size:13px;padding:8px 10px}
+ .options {font-size:15px;line-height:1.5}.option strong {font-size:15px}
+ .steps {font-size:14px;line-height:1.6}
+ table.data {font-size:15px;line-height:1.4}table.data th {font-size:13px}
+ .tablenote,.value-note {font-size:13px}
+ .review-toolbar {font-size:13px}.toolbar-heading strong {font-size:16px}
+ .review-progress,.review-message {font-size:12px}
+ .review-toolbar button {font-size:13px;min-height:36px;padding:8px 11px}
+ .proposal-controls {font-size:13px}.proposal-controls button {font-size:12px;padding:6px 9px}
+ .clear-option {font-size:12px;padding:5px 8px}
+ .discussion-details,.discussion-details textarea {font-size:14px}
+ .proposal-group.side-by-side .comparison-grid {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}
+ .proposal-group.side-by-side .comparison-current {display:block}
+ .proposal-group.side-by-side .comparison-grid>.context,.proposal-group.side-by-side .comparison-grid>.proposal {margin:0;min-width:0}
+ .proposal-group.side-by-side .proposal-controls {gap:6px}
+ .proposal-group.side-by-side .proposal-controls label {flex-basis:100%}
+}
+[hidden] {display:none!important}
+@media print {
+ html {print-color-adjust:exact;-webkit-print-color-adjust:exact}
+ .interactive-only,.review-ready .interactive-only,.wording-editor {display:none!important}
+ .review-print-note:not(:empty) {display:block}
+ .proposed-text[hidden] {display:block!important}
+ .choice {display:inline-flex!important;align-items:center;justify-content:center;
+  vertical-align:0;box-sizing:border-box;color:#000;border-color:#000}
+ .option.selected .choice::after {content:'●';font:6pt/1 Arial,sans-serif;color:#000}
+ .option.selected {background:#eaf1fb;border:1.5pt solid #000;border-left-width:3pt}
+ .option.selected .print-selection-label {display:inline-block;margin-left:7pt;
+  padding:1pt 4pt;border:1pt solid #000;color:#000;font:700 7.5pt/1.3 Inter,Arial,sans-serif}
+ .review-ready .discussion-option.selected,.discussion-option.selected {display:block!important}
+ .discussion-radio,.discussion-details {display:none!important}
+ .option-section:has(.option.selected) {display:block!important}
+ .proposal-group[hidden] {display:block!important}
+ .comparison-current {display:none!important}
+ .comparison-grid {display:block!important}
+ .proposal-group {margin:0;break-inside:auto}
+ .wording-heading {display:block}
+}
+@media(max-width:650px) {
+ .review-toolbar {top:0;padding:10px;gap:9px}
+ .toolbar-heading,.toolbar-actions,.review-message {flex-basis:100%}
+ .review-toolbar button {flex:1;padding:8px 5px}
+ .discussion-details textarea,.wording-editor {font-size:16px}
+}
+</style>
+<main><h1>Hypothetical training-program study — proposed manuscript edits</h1>
+<p class="meta">Illustrative sample. All participants, data and manuscript quotations are fictional.</p>
+<nav class="review-toolbar interactive-only" aria-label="Review controls"><div class="toolbar-heading"><strong>Your review</strong><span id="review-progress" class="review-progress"></span></div><div class="toolbar-actions"><button type="button" class="primary" id="export-choices">Export choices</button><button type="button" id="import-choices">Import choices</button><button type="button" id="print-review">Print / save PDF</button></div><div class="toolbar-navigation"><button type="button" id="next-unreviewed">Next unreviewed</button></div><p id="review-message" class="review-message" aria-live="polite">Your edits stay in this browser. Export choices to share them.</p><input id="import-file" type="file" accept=".json,application/json" hidden></nav><noscript><p class="meta">Enable JavaScript to select options, edit wording and export choices. The report remains readable below.</p></noscript>
+<p class="legend"><del>Red strikeout</del> marks short deletions; <ins>green</ins> marks additions. Full rewritten passages remain unmarked in the current-text panel for readability. ★ marks the recommended implementation option.</p>
+<nav id="issue-navigation" class="issue-navigation interactive-only" aria-labelledby="issue-index-heading"><h2 id="issue-index-heading">Issues</h2><p class="index-legend">✓ Revision selected · ? Discuss Further · □ Unreviewed</p><div id="issue-index-list"></div></nav>
+<article class="issue" data-id="EX01">
+<div class="itemhead"><span class="check" role="img" aria-label="No option selected" data-state="pending"></span>
+<h2 tabindex="-1">1. Four missing outcomes are being counted as known noncompletion <span class="pill decision">Analysis decision</span></h2></div>
+<p class="where">Participants and Results, page 1</p>
+<div class="context"><div class="label">Current draft</div><p class="current-text">Follow-up outcomes were observed for <del>all</del> 80 recruited students.</p><div class="source">Fictional manuscript, p. 1</div></div>
+<div class="context"><div class="label">Current draft</div><p class="current-text">Forty-eight students completed the course (60.0%), while the remaining 32 did not complete it.</p><div class="source">Fictional manuscript, p. 1</div></div>
+<h3>What needs to change and why</h3><div class="why">
+<p>The fictional dataset contains 80 recruited students, but only 76 have a recorded follow-up outcome: 48 completed the course and 28 did not. Four outcomes are missing. The original calculation counts every value other than an observed completion as noncompletion, turning those four unknown outcomes into four additional failures.</p>
+<p>The denominator depends on the question being answered. Among students with a recorded outcome, completion is 48/76 = 63.2%. Among everyone recruited, documented completion is 48/80 = 60.0%. Both are useful descriptions, but 60.0% does not establish that the other 40.0% failed. If all four missing students completed the course, actual completion across the full cohort would be 65.0%; if none did, it would be 60.0%.</p>
+<div class="tableblock"><h4>What the fictional records establish</h4><table class="data"><thead><tr><th>Follow-up status</th><th>Students</th><th>Share of all 80 recruits</th></tr></thead><tbody><tr><td>Known completion</td><td>48</td><td>60.0%</td></tr><tr><td>Known noncompletion</td><td>28</td><td>35.0%</td></tr><tr><td>Outcome missing</td><td>4</td><td>5.0%</td></tr></tbody></table><p class="tablenote">There are 76 observed outcomes. The observed-outcome completion rate is 63.2%; completion across all recruits is bounded between 60.0% and 65.0% without additional information.</p></div>
+</div>
+<section class="option-section"><h3>Implementation options</h3><button type="button" class="clear-option interactive-only">Clear selection</button><div class="options">
+<label class="option recommended" data-option-id="observed-outcomes"><span class="option-heading"><input class="option-radio interactive-only" type="radio" name="option-1" value="observed-outcomes" aria-labelledby="option-label-1-0" aria-describedby="option-description-1-0"><strong id="option-label-1-0"><span class="choice" aria-hidden="true"></span>★ A. Report completion among students with observed outcomes</strong><span class="print-selection-label" aria-hidden="true">Selected</span></span><span class="option-description" id="option-description-1-0">Use 76 as the denominator for the observed-outcome rate, keep 80 as the recruitment total, and disclose the four missing outcomes. Do not generalize 63.2% to all recruits without an assumption about missingness.</span></label>
+<label class="option" data-option-id="documented-cohort"><span class="option-heading"><input class="option-radio interactive-only" type="radio" name="option-1" value="documented-cohort" aria-labelledby="option-label-1-1" aria-describedby="option-description-1-1"><strong id="option-label-1-1"><span class="choice" aria-hidden="true"></span>B. Describe documented completion across all recruits</strong><span class="print-selection-label" aria-hidden="true">Selected</span></span><span class="option-description" id="option-description-1-1">Keep 80 as the denominator and report all three statuses separately. Call 60.0% documented completion, with four outcomes unknown. To estimate actual completion for the entire cohort, recover the missing records or state the 60.0%–65.0% bounds.</span></label>
+<div class="option discussion-option interactive-only"><label class="option-heading"><input class="discussion-radio" type="radio" name="option-1" value="discuss"><strong><span class="choice" aria-hidden="true"></span>Discuss Further</strong><span class="print-selection-label" aria-hidden="true">Selected</span></label><div class="discussion-details" hidden><label>What would you like to discuss?<textarea class="issue-comment" rows="3" placeholder="Add your question, concern or alternative suggestion."></textarea></label><p class="legacy-decision-note" hidden></p></div></div></div></section><p class="review-print-note"></p>
+<div class="wording-heading"><h3>Proposed wording</h3><div class="wording-tools interactive-only"><button type="button" class="show-alternatives" aria-expanded="false" hidden>Show alternatives</button><button type="button" class="compare-wording" aria-pressed="false">Compare side by side</button></div></div><p class="wording-focus-note interactive-only" aria-live="polite"></p>
+<section class="proposal-group" data-group-id="participants-count">
+<div class="comparison-grid">
+<div class="context comparison-current"><div class="label">Current draft</div><p class="current-text">Follow-up outcomes were observed for all 80 recruited students.</p></div>
+<div class="proposal" data-proposal-id="participants-count"><div class="label">Participants — replace the complete-record claim under either option</div><p class="proposed-text">Follow-up outcomes were observed for <ins>76 of the</ins> 80 recruited students.</p><textarea class="wording-editor interactive-only" aria-label="Proposed wording: Participants — replace the complete-record claim under either option" hidden>Follow-up outcomes were observed for 76 of the 80 recruited students.</textarea><div class="proposal-controls interactive-only"><label><input type="checkbox" class="include-wording"> Include this wording</label><span class="wording-state"></span><button type="button" class="edit-wording" aria-expanded="false">Edit wording</button><button type="button" class="restore-wording" hidden>Restore original</button></div></div></div></section>
+<section class="proposal-group" data-group-id="results-observed">
+<div class="condition">Option A: use the 76 observed outcomes as the denominator.</div>
+<div class="comparison-grid">
+<div class="context comparison-current"><div class="label">Current draft</div><p class="current-text">Forty-eight students completed the course (60.0%), while the remaining 32 did not complete it.</p></div>
+<div class="proposal" data-proposal-id="results-observed"><div class="label">Results — completion among observed outcomes</div><p class="proposed-text"><ins>Among the 76 students with recorded outcomes, 48 completed the course (63.2%) and 28 did not (36.8%). Four of the 80 recruited students had no recorded follow-up outcome.</ins></p><textarea class="wording-editor interactive-only" aria-label="Proposed wording: Results — completion among observed outcomes" hidden>Among the 76 students with recorded outcomes, 48 completed the course (63.2%) and 28 did not (36.8%). Four of the 80 recruited students had no recorded follow-up outcome.</textarea><div class="proposal-controls interactive-only"><label><input type="checkbox" class="include-wording"> Include this wording</label><span class="wording-state"></span><button type="button" class="edit-wording" aria-expanded="false">Edit wording</button><button type="button" class="restore-wording" hidden>Restore original</button></div></div></div></section>
+<section class="proposal-group" data-group-id="results-cohort">
+<div class="condition">Option B: keep all 80 recruits in the denominator and distinguish unknown outcomes.</div>
+<div class="comparison-grid">
+<div class="context comparison-current"><div class="label">Current draft</div><p class="current-text">Forty-eight students completed the course (60.0%), while the remaining 32 did not complete it.</p></div>
+<div class="proposal" data-proposal-id="results-cohort"><div class="label">Results — documented completion across the recruited cohort</div><p class="proposed-text"><ins>Among all 80 recruited students, 48 had documented course completion (60.0%), 28 had documented noncompletion (35.0%), and four had no recorded follow-up outcome (5.0%). Actual completion across the full cohort was therefore between 60.0% and 65.0%.</ins></p><textarea class="wording-editor interactive-only" aria-label="Proposed wording: Results — documented completion across the recruited cohort" hidden>Among all 80 recruited students, 48 had documented course completion (60.0%), 28 had documented noncompletion (35.0%), and four had no recorded follow-up outcome (5.0%). Actual completion across the full cohort was therefore between 60.0% and 65.0%.</textarea><div class="proposal-controls interactive-only"><label><input type="checkbox" class="include-wording"> Include this wording</label><span class="wording-state"></span><button type="button" class="edit-wording" aria-expanded="false">Edit wording</button><button type="button" class="restore-wording" hidden>Restore original</button></div></div></div></section>
+<h3>Implementation</h3><ol class="steps">
+<li>Preserve a missing follow-up value as missing. Code known completion and known noncompletion separately; do not turn an unobserved outcome into a known failure.</li>
+<li>Choose which descriptive question the Results paragraph answers and use the corresponding complete replacement. The Participants correction applies under either option.</li>
+<li>Use the same denominator and missingness description in the abstract, tables and figures. If the goal is actual completion across all recruits, seek the missing outcomes or report the bounds.</li>
+</ol><p class="issue-conflicts interactive-only" role="alert" hidden></p></article>
+</main>
+<script type="application/json" id="review-manifest">{"schema_version": 1, "report": {"id": "sha256:6ac06e18efa6e6de6320c83792ee66c16275ccffcbf97eb623f6e32df5081203", "title": "Hypothetical training-program study — proposed manuscript edits"}, "download_basename": "sample-report", "issues": [{"id": "EX01", "title": "Four missing outcomes are being counted as known noncompletion", "options": [{"id": "observed-outcomes", "label": "A. Report completion among students with observed outcomes"}, {"id": "documented-cohort", "label": "B. Describe documented completion across all recruits"}], "proposals": [{"id": "participants-count", "label": "Participants — replace the complete-record claim under either option", "quote_index": 0, "current_text": "Follow-up outcomes were observed for all 80 recruited students.", "condition": "", "option_ids": [], "original_text": "Follow-up outcomes were observed for 76 of the 80 recruited students.", "default_included": true, "requires_selection": false}, {"id": "results-observed", "label": "Results — completion among observed outcomes", "quote_index": 1, "current_text": "Forty-eight students completed the course (60.0%), while the remaining 32 did not complete it.", "condition": "Option A: use the 76 observed outcomes as the denominator.", "option_ids": ["observed-outcomes"], "original_text": "Among the 76 students with recorded outcomes, 48 completed the course (63.2%) and 28 did not (36.8%). Four of the 80 recruited students had no recorded follow-up outcome.", "default_included": false, "requires_selection": false}, {"id": "results-cohort", "label": "Results — documented completion across the recruited cohort", "quote_index": 1, "current_text": "Forty-eight students completed the course (60.0%), while the remaining 32 did not complete it.", "condition": "Option B: keep all 80 recruits in the denominator and distinguish unknown outcomes.", "option_ids": ["documented-cohort"], "original_text": "Among all 80 recruited students, 48 had documented course completion (60.0%), 28 had documented noncompletion (35.0%), and four had no recorded follow-up outcome (5.0%). Actual completion across the full cohort was therefore between 60.0% and 65.0%.", "default_included": false, "requires_selection": false}]}]}</script>
+<script>/* Offline review choices: browser autosave, JSON export/import, plain-text edits. */
+(() => {
+  'use strict';
+  const manifest = JSON.parse(document.getElementById('review-manifest').textContent);
+  const format = 'paper-review-decisions';
+  const storageKey = 'paper-review:v1:' + manifest.report.id;
+  const decisions = ['undecided', 'implement', 'discuss', 'skip'];
+  const message = document.getElementById('review-message');
+  const issueNodes = new Map([...document.querySelectorAll('article.issue')].map(node => [node.dataset.id, node]));
+  const navigation = document.getElementById('issue-navigation');
+  const nextUnreviewed = document.getElementById('next-unreviewed');
+  const indexNodes = new Map();
+  const showAlternatives = new Set();
+  const comparisons = new Set();
+  navigation.hidden = !manifest.issues.length;
+  manifest.issues.forEach((issue, index) => {
+    const button = document.createElement('button');
+    button.type = 'button'; button.className = 'issue-index-link'; button.dataset.jumpId = issue.id;
+    const marker = document.createElement('span');
+    marker.className = 'check index-marker'; marker.setAttribute('aria-hidden', 'true');
+    const number = document.createElement('span'); number.className = 'index-number'; number.textContent = (index + 1) + '.';
+    const title = document.createElement('span'); title.className = 'index-title'; title.textContent = issue.title;
+    button.append(marker, number, title);
+    button.addEventListener('click', () => jumpToIssue(issue.id));
+    document.getElementById('issue-index-list').appendChild(button);
+    indexNodes.set(issue.id, button);
+  });
+  const originalMarkup = new Map();
+  for (const [issueId, node] of issueNodes) {
+    for (const proposal of node.querySelectorAll('[data-proposal-id]')) {
+      originalMarkup.set(issueId + '\n' + proposal.dataset.proposalId, proposal.querySelector('.proposed-text').innerHTML);
+    }
+  }
+
+  function initialState() {
+    return {format, schema_version: 1, report: manifest.report, reviewer: '', exported_at: null, updated_at: null,
+      issues: manifest.issues.map(issue => ({id: issue.id, title: issue.title, decision: 'undecided',
+        selected_option_id: null, selected_option_label: null, comment: '',
+        proposals: issue.proposals.map(proposal => ({...proposal, text: proposal.original_text,
+          included: proposal.default_included, edited: false}))}))};
+  }
+
+  function validate(payload) {
+    if (!payload || payload.format !== format || payload.schema_version !== 1) throw new Error('Not a supported paper-review choices file.');
+    if (!payload.report || payload.report.id !== manifest.report.id) throw new Error('These choices belong to a different report version.');
+    if ((payload.reviewer != null && typeof payload.reviewer !== 'string') || !Array.isArray(payload.issues)) throw new Error('Invalid issue list or imported reviewer metadata.');
+    const incoming = new Map(payload.issues.map(issue => [issue?.id, issue]));
+    if (incoming.size !== payload.issues.length || incoming.size !== manifest.issues.length) throw new Error('Issue ids do not match this report.');
+    const clean = initialState();
+    clean.reviewer = payload.reviewer ?? '';
+    clean.exported_at = payload.exported_at;
+    clean.updated_at = payload.updated_at;
+    for (const issue of clean.issues) {
+      const value = incoming.get(issue.id);
+      if (!value || !decisions.includes(value.decision) || typeof value.comment !== 'string') throw new Error('Invalid decision or comment for ' + issue.id + '.');
+      const meta = manifest.issues.find(item => item.id === issue.id);
+      if (value.decision === 'implement' && value.selected_option_id === null && meta.options[0]?.synthetic) {
+        value.selected_option_id = meta.options[0].id;
+      }
+      if (value.selected_option_id !== null && !meta.options.some(option => option.id === value.selected_option_id)) throw new Error('Unknown option for ' + issue.id + '.');
+      if (!Array.isArray(value.proposals)) throw new Error('Invalid wording list for ' + issue.id + '.');
+      const changes = new Map(value.proposals.map(proposal => [proposal?.id, proposal]));
+      if (changes.size !== value.proposals.length || changes.size !== issue.proposals.length) throw new Error('Proposal ids do not match ' + issue.id + '.');
+      issue.decision = value.decision;
+      issue.comment = value.comment;
+      issue.selected_option_id = value.selected_option_id;
+      issue.selected_option_label = meta.options.find(option => option.id === value.selected_option_id)?.label ?? null;
+      for (const proposal of issue.proposals) {
+        const change = changes.get(proposal.id);
+        if (!change || change.original_text !== proposal.original_text) throw new Error('Original wording does not match ' + issue.id + '/' + proposal.id + '.');
+        if (typeof change.text !== 'string' || typeof change.included !== 'boolean') throw new Error('Invalid edited wording for ' + issue.id + '/' + proposal.id + '.');
+        proposal.text = change.text;
+        proposal.included = change.included;
+        proposal.edited = change.text !== proposal.original_text;
+      }
+    }
+    return clean;
+  }
+
+  function announce(text, error = false) {
+    message.textContent = text;
+    message.dataset.tone = error ? 'error' : 'normal';
+  }
+
+  let state = initialState();
+  try {
+    const cached = localStorage.getItem(storageKey);
+    if (cached) {state = validate(JSON.parse(cached)); announce('Restored your choices from this browser. Export choices to share them.');}
+  } catch (_) {
+    announce('Browser saving is unavailable or the saved review could not be restored. Export choices to keep your edits.');
+  }
+
+  function save() {
+    state.updated_at = new Date().toISOString();
+    try {
+      localStorage.setItem(storageKey, JSON.stringify(state));
+      announce('Saved in this browser. Export choices to share them.');
+    } catch (_) {
+      announce('Browser saving is unavailable. Export choices to keep your edits.');
+    }
+    renderProgress();
+  }
+
+  function renderProgress() {
+    const count = state.issues.filter(issue => issue.decision !== 'undecided').length;
+    document.getElementById('review-progress').textContent = count + ' of ' + state.issues.length + ' reviewed';
+    nextUnreviewed.disabled = !state.issues.some(issue => issue.decision === 'undecided');
+  }
+
+  function jumpToIssue(id) {
+    const node = issueNodes.get(id);
+    if (!node) return;
+    const toolbar = document.querySelector('.review-toolbar');
+    const top = window.scrollY + node.getBoundingClientRect().top - toolbar.getBoundingClientRect().height - 20;
+    window.scrollTo({top: Math.max(0, top), behavior: 'instant'});
+    node.querySelector('h2').focus({preventScroll: true});
+  }
+
+  function renderWordingFocus(issue) {
+    const node = issueNodes.get(issue.id);
+    const unused = issue.proposals.filter(proposal => issue.decision === 'implement' &&
+      proposal.option_ids.length && !proposal.option_ids.includes(issue.selected_option_id) && !proposal.included);
+    const unusedIds = new Set(unused.map(proposal => proposal.id));
+    for (const group of node.querySelectorAll('.proposal-group')) {
+      const proposal = issue.proposals.find(item => item.id === group.dataset.groupId);
+      group.hidden = unusedIds.has(proposal.id) && !showAlternatives.has(issue.id);
+      group.classList.toggle('side-by-side', comparisons.has(issue.id) && proposal.current_text !== null);
+    }
+    const alternatives = node.querySelector('.show-alternatives');
+    alternatives.hidden = !unused.length;
+    alternatives.textContent = showAlternatives.has(issue.id) ? 'Hide other alternatives' : 'Show ' + unused.length + ' other alternative' + (unused.length === 1 ? '' : 's');
+    alternatives.setAttribute('aria-expanded', String(showAlternatives.has(issue.id)));
+    const compare = node.querySelector('.compare-wording');
+    compare.hidden = !issue.proposals.some(proposal => proposal.current_text !== null);
+    compare.setAttribute('aria-pressed', String(comparisons.has(issue.id)));
+    compare.textContent = comparisons.has(issue.id) ? 'Exit comparison' : 'Compare side by side';
+    const note = node.querySelector('.wording-focus-note');
+    if (unused.length) note.textContent = showAlternatives.has(issue.id) ? 'All alternatives are shown. Only included wording belongs to your selected revision.' : 'Showing common changes and your selected wording. Other alternatives are folded.';
+    else if (issue.decision === 'discuss' || issue.decision === 'skip') note.textContent = 'All proposed wording is shown for discussion.';
+    else note.textContent = '';
+  }
+
+  function renderIssue(issue) {
+    const node = issueNodes.get(issue.id);
+    const discussing = issue.decision === 'discuss' || issue.decision === 'skip';
+    const implementing = issue.decision === 'implement' && Boolean(issue.selected_option_id);
+    const marker = node.querySelector('.check');
+    marker.dataset.state = discussing ? 'discuss' : implementing ? 'selected' : 'pending';
+    marker.textContent = discussing ? '?' : implementing ? '✓' : '';
+    marker.setAttribute('aria-label', discussing ? 'Discuss Further' : implementing ? 'Selected option: ' + issue.selected_option_label : 'No option selected');
+    const indexButton = indexNodes.get(issue.id);
+    const indexMarker = indexButton.querySelector('.index-marker');
+    indexMarker.textContent = marker.textContent; indexMarker.dataset.state = marker.dataset.state;
+    indexButton.setAttribute('aria-label', 'Issue ' + (manifest.issues.findIndex(item => item.id === issue.id) + 1) + ', ' + issue.title + '. ' + marker.getAttribute('aria-label'));
+    node.querySelector('.discussion-radio').checked = discussing;
+    node.querySelector('.discussion-option').classList.toggle('selected', discussing);
+    node.querySelector('.discussion-details').hidden = !discussing;
+    const legacyNote = node.querySelector('.legacy-decision-note');
+    legacyNote.hidden = issue.decision !== 'skip';
+    legacyNote.textContent = issue.decision === 'skip' ? 'This imported review was marked Skip; no revision is approved.' : '';
+    const comment = node.querySelector('.issue-comment');
+    if (comment.value !== issue.comment) comment.value = issue.comment;
+    for (const option of node.querySelectorAll('[data-option-id]')) {
+      const selected = issue.decision === 'implement' && issue.selected_option_id === option.dataset.optionId;
+      option.classList.toggle('selected', selected);
+      option.querySelector('.option-radio').checked = selected;
+    }
+    for (const proposalNode of node.querySelectorAll('[data-proposal-id]')) {
+      const proposal = issue.proposals.find(item => item.id === proposalNode.dataset.proposalId);
+      proposalNode.querySelector('.include-wording').checked = proposal.included;
+      const editor = proposalNode.querySelector('.wording-editor');
+      if (editor.value !== proposal.text) editor.value = proposal.text;
+      const view = proposalNode.querySelector('.proposed-text');
+      if (proposal.edited) {
+        const addition = document.createElement('ins');
+        addition.textContent = proposal.text;
+        view.replaceChildren(addition);
+      } else {
+        // This markup was escaped by the renderer and captured before any user edits.
+        view.innerHTML = originalMarkup.get(issue.id + '\n' + proposal.id);
+      }
+      proposalNode.querySelector('.wording-state').textContent = proposal.edited ? 'Edited' : '';
+      proposalNode.querySelector('.restore-wording').hidden = !proposal.edited;
+    }
+    const conflicts = [];
+    const included = issue.proposals.filter(proposal => proposal.included);
+    const targets = new Set();
+    for (const proposal of included) {
+      if (proposal.quote_index !== null && targets.has(proposal.quote_index)) conflicts.push('Two included replacements target the same passage. Choose one or explain the combination in your comment.');
+      targets.add(proposal.quote_index);
+      if (issue.decision === 'implement' && proposal.option_ids.length && !proposal.option_ids.includes(issue.selected_option_id)) conflicts.push('Included wording belongs to a different option. Check your selection.');
+      if (!proposal.text.trim()) conflicts.push('Included wording is empty. Clarify whether you intend to delete the passage.');
+    }
+    const meta = manifest.issues.find(item => item.id === issue.id);
+    if (issue.decision === 'implement' && meta.options.length && !issue.selected_option_id) conflicts.push('Choose an implementation option or explain your preference in the comment.');
+    if (issue.decision === 'implement' && !included.length) conflicts.push('No proposed wording is included. Mark the wording you want or describe the change in your comment.');
+    const alert = node.querySelector('.issue-conflicts');
+    alert.textContent = [...new Set(conflicts)].join(' ');
+    alert.hidden = !conflicts.length;
+    const printNote = node.querySelector('.review-print-note');
+    const notes = [];
+    if (issue.decision === 'discuss') notes.push('Selected option: Discuss Further');
+    else if (issue.decision === 'skip') notes.push('Imported review: Skip; no revision approved.');
+    else if (issue.decision === 'implement' && issue.selected_option_label) notes.push('Selected option: ' + issue.selected_option_label);
+    if (issue.comment) notes.push('Comment: ' + issue.comment);
+    if (conflicts.length) notes.push('Needs clarification: ' + [...new Set(conflicts)].join(' '));
+    printNote.textContent = notes.join('\n');
+    renderWordingFocus(issue);
+  }
+
+  function renderAll() {
+    state.issues.forEach(renderIssue);
+    renderProgress();
+  }
+
+  for (const [id, node] of issueNodes) {
+    const current = () => state.issues.find(issue => issue.id === id);
+    node.querySelector('.show-alternatives').addEventListener('click', () => {
+      if (showAlternatives.has(id)) showAlternatives.delete(id); else showAlternatives.add(id);
+      renderWordingFocus(current());
+    });
+    node.querySelector('.compare-wording').addEventListener('click', () => {
+      if (comparisons.has(id)) comparisons.delete(id); else comparisons.add(id);
+      renderWordingFocus(current());
+    });
+    node.querySelector('.discussion-radio').addEventListener('change', () => {
+      const issue = current(); issue.decision = 'discuss';
+      issue.selected_option_id = null; issue.selected_option_label = null;
+      renderIssue(issue); save(); node.querySelector('.issue-comment').focus();
+    });
+    node.querySelector('.issue-comment').addEventListener('input', event => {
+      const issue = current(); issue.comment = event.target.value; renderIssue(issue); save();
+    });
+    for (const optionNode of node.querySelectorAll('[data-option-id]')) {
+      optionNode.querySelector('.option-radio').addEventListener('change', () => {
+        const issue = current();
+        issue.selected_option_id = optionNode.dataset.optionId;
+        issue.selected_option_label = manifest.issues.find(item => item.id === id).options.find(option => option.id === issue.selected_option_id).label;
+        issue.decision = 'implement';
+        showAlternatives.delete(id);
+        for (const proposal of issue.proposals) {
+          if (proposal.option_ids.length) proposal.included = proposal.option_ids.includes(issue.selected_option_id);
+        }
+        renderIssue(issue); save();
+      });
+    }
+    node.querySelector('.clear-option')?.addEventListener('click', () => {
+      const issue = current(); issue.decision = 'undecided'; issue.selected_option_id = null; issue.selected_option_label = null;
+      for (const proposal of issue.proposals) if (proposal.option_ids.length) proposal.included = false;
+      renderIssue(issue); save();
+    });
+    for (const proposalNode of node.querySelectorAll('[data-proposal-id]')) {
+      const change = () => current().proposals.find(item => item.id === proposalNode.dataset.proposalId);
+      const editor = proposalNode.querySelector('.wording-editor');
+      const view = proposalNode.querySelector('.proposed-text');
+      const editButton = proposalNode.querySelector('.edit-wording');
+      proposalNode.querySelector('.include-wording').addEventListener('change', event => {
+        change().included = event.target.checked; renderIssue(current()); save();
+      });
+      editButton.addEventListener('click', () => {
+        const opening = editor.hidden;
+        editor.hidden = !opening; view.hidden = opening;
+        editButton.textContent = opening ? 'Done editing' : 'Edit wording';
+        editButton.setAttribute('aria-expanded', String(opening));
+        if (opening) {editor.style.height = Math.max(90, editor.scrollHeight + 3) + 'px'; editor.focus();}
+      });
+      editor.addEventListener('input', () => {
+        const proposal = change(); proposal.text = editor.value; proposal.edited = editor.value !== proposal.original_text;
+        editor.style.height = 'auto'; editor.style.height = Math.max(90, editor.scrollHeight + 3) + 'px';
+        renderIssue(current()); save();
+      });
+      proposalNode.querySelector('.restore-wording').addEventListener('click', () => {
+        const proposal = change(); proposal.text = proposal.original_text; proposal.edited = false;
+        renderIssue(current()); save();
+      });
+    }
+  }
+  nextUnreviewed.addEventListener('click', () => {
+    const boundary = document.querySelector('.review-toolbar').getBoundingClientRect().bottom + 24;
+    let currentIndex = -1;
+    state.issues.forEach((issue, index) => {
+      if (issueNodes.get(issue.id).getBoundingClientRect().top <= boundary) currentIndex = index;
+    });
+    for (let offset = 1; offset <= state.issues.length; offset++) {
+      const index = (currentIndex + offset) % state.issues.length;
+      if (state.issues[index].decision === 'undecided') {jumpToIssue(state.issues[index].id); break;}
+    }
+  });
+  document.getElementById('export-choices').addEventListener('click', () => {
+    state.exported_at = new Date().toISOString();
+    const url = URL.createObjectURL(new Blob([JSON.stringify(state, null, 2) + '\n'], {type: 'application/json'}));
+    const link = document.createElement('a');
+    link.href = url; link.download = manifest.download_basename + '-choices.json';
+    document.body.appendChild(link); link.click(); link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    announce('Choices exported. Send the JSON file with this report to Codex or Claude.');
+  });
+  const importFile = document.getElementById('import-file');
+  document.getElementById('import-choices').addEventListener('click', () => importFile.click());
+  importFile.addEventListener('change', async () => {
+    const file = importFile.files[0];
+    if (!file) return;
+    try {
+      const incoming = validate(JSON.parse(await file.text()));
+      if (state.issues.some(issue => issue.comment || issue.decision !== 'undecided' || issue.selected_option_id || issue.proposals.some(proposal => proposal.edited || proposal.included !== proposal.default_included)) &&
+          !window.confirm('Replace the choices, comments and wording currently shown with this imported review?')) return;
+      state = incoming; renderAll(); save(); announce('Choices imported. You can continue reviewing or export them again.');
+    } catch (error) {announce('Could not import choices: ' + error.message, true);}
+    finally {importFile.value = '';}
+  });
+  document.getElementById('print-review').addEventListener('click', () => window.print());
+  renderAll();
+  document.documentElement.classList.add('review-ready');
+})();
+</script>
+</html>

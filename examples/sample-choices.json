@@ -1,0 +1,68 @@
+{
+  "format": "paper-review-decisions",
+  "schema_version": 1,
+  "report": {
+    "id": "sha256:6ac06e18efa6e6de6320c83792ee66c16275ccffcbf97eb623f6e32df5081203",
+    "title": "Hypothetical training-program study — proposed manuscript edits"
+  },
+  "reviewer": "",
+  "exported_at": "2026-11-08T15:22:14.647118+00:00",
+  "issues": [
+    {
+      "id": "EX01",
+      "title": "Four missing outcomes are being counted as known noncompletion",
+      "decision": "implement",
+      "selected_option_id": "observed-outcomes",
+      "selected_option_label": "A. Report completion among students with observed outcomes",
+      "comment": "Use the observed-outcome rate in Results and retain all 80 students in the recruitment count. Keep the four unknown outcomes visible.",
+      "proposals": [
+        {
+          "id": "participants-count",
+          "label": "Participants — replace the complete-record claim under either option",
+          "quote_index": 0,
+          "current_text": "Follow-up outcomes were observed for all 80 recruited students.",
+          "condition": "",
+          "option_ids": [],
+          "original_text": "Follow-up outcomes were observed for 76 of the 80 recruited students.",
+          "default_included": true,
+          "requires_selection": false,
+          "text": "Follow-up outcomes were observed for 76 of the 80 recruited students.",
+          "included": true,
+          "edited": false
+        },
+        {
+          "id": "results-observed",
+          "label": "Results — completion among observed outcomes",
+          "quote_index": 1,
+          "current_text": "Forty-eight students completed the course (60.0%), while the remaining 32 did not complete it.",
+          "condition": "Option A: use the 76 observed outcomes as the denominator.",
+          "option_ids": [
+            "observed-outcomes"
+          ],
+          "original_text": "Among the 76 students with recorded outcomes, 48 completed the course (63.2%) and 28 did not (36.8%). Four of the 80 recruited students had no recorded follow-up outcome.",
+          "default_included": false,
+          "requires_selection": false,
+          "text": "Among the 76 students with recorded outcomes, 48 completed the course (63.2%) and 28 did not (36.8%). Four of the 80 recruited students had no recorded follow-up outcome.",
+          "included": true,
+          "edited": false
+        },
+        {
+          "id": "results-cohort",
+          "label": "Results — documented completion across the recruited cohort",
+          "quote_index": 1,
+          "current_text": "Forty-eight students completed the course (60.0%), while the remaining 32 did not complete it.",
+          "condition": "Option B: keep all 80 recruits in the denominator and distinguish unknown outcomes.",
+          "option_ids": [
+            "documented-cohort"
+          ],
+          "original_text": "Among all 80 recruited students, 48 had documented course completion (60.0%), 28 had documented noncompletion (35.0%), and four had no recorded follow-up outcome (5.0%). Actual completion across the full cohort was therefore between 60.0% and 65.0%.",
+          "default_included": false,
+          "requires_selection": false,
+          "text": "Among all 80 recruited students, 48 had documented course completion (60.0%), 28 had documented noncompletion (35.0%), and four had no recorded follow-up outcome (5.0%). Actual completion across the full cohort was therefore between 60.0% and 65.0%.",
+          "included": false,
+          "edited": false
+        }
+      ]
+    }
+  ]
+}

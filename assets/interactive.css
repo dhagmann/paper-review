@@ -1,0 +1,123 @@
+/* Review controls share the report's navy, gray and green palette. */
+.interactive-only,.review-print-note,.print-selection-label {display:none}
+.review-ready .interactive-only {display:block}
+.review-ready .review-toolbar {display:flex}
+.review-toolbar {position:sticky;top:8px;z-index:5;gap:10px 14px;flex-wrap:wrap;
+ background:white;border:1px solid var(--rule);border-top:3px solid var(--navy);
+ padding:12px 14px;margin:12px 0 15px;font:12px/1.45 Inter,Arial,sans-serif;
+ box-shadow:0 3px 10px #1f3a6810}
+.toolbar-heading {display:flex;gap:12px;align-items:center;flex:1 1 180px;color:var(--navy)}
+.toolbar-heading strong {font-size:15px}.review-progress {font-size:11px;color:var(--muted)}
+.toolbar-actions {display:flex;gap:7px;flex-wrap:wrap}
+.review-toolbar button,.proposal-controls button,.clear-option {
+ font:600 11px/1.3 Inter,Arial,sans-serif;border:1px solid #aeb9ca;border-radius:3px;
+ padding:7px 9px;background:white;color:var(--navy);cursor:pointer}
+.review-toolbar .primary {background:var(--navy);border-color:var(--navy);color:white}
+.review-toolbar button:hover,.proposal-controls button:hover,.clear-option:hover {background:#edf2f8}
+.review-toolbar .primary:hover {background:#142d55}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible {
+ outline:2px solid #2e69a7;outline-offset:3px}
+.review-message {flex:1 1 380px;color:var(--muted);margin:0;font-size:11px}
+.review-message[data-tone="error"] {color:#9b2720;font-weight:600}
+.discussion-details textarea {
+ border:1px solid #adb8c8;border-radius:3px;padding:6px 8px;color:var(--ink);
+ background:white;font:12px/1.45 Inter,Arial,sans-serif}
+.review-ready .option-heading {display:flex;align-items:baseline;gap:5px;cursor:pointer}
+.review-ready .option[data-option-id] {cursor:pointer}
+.review-ready .option[data-option-id]:hover:not(.selected) {outline:1px solid #adb8c8;outline-offset:0}
+.review-ready .option[data-option-id]:focus-within {outline:2px solid #2e69a7;outline-offset:2px}
+.option-radio,.discussion-radio {accent-color:var(--navy);margin:0 4px 0 0;transform:translateY(1px)}
+.review-ready .option-radio {display:inline-block}
+.review-ready .choice {display:none}
+.option.selected {border-left:3px solid var(--navy);background:#eaf1fb}
+.option-heading {font-weight:600}
+.clear-option {padding:3px 6px;margin:0 0 4px;font-size:10px}
+.review-ready .proposal-controls {display:flex}
+.proposal-controls {align-items:center;gap:8px;flex-wrap:wrap;margin:10px 0 0;
+ font:11px/1.4 Inter,Arial,sans-serif;color:var(--navy)}
+.proposal-controls label {display:flex;align-items:center;gap:5px;margin-right:auto}
+.proposal-controls input {accent-color:var(--insink)}
+.proposal-controls button {padding:4px 7px;font-size:10px}
+.wording-state {font-weight:600;color:var(--insink)}
+.wording-editor {width:100%;min-height:90px;resize:vertical;border:1px solid #629579;
+ padding:9px;color:var(--ink);background:white;font:inherit;line-height:1.5;margin:5px 0}
+.discussion-option {border-left-style:dashed}
+.discussion-details {margin-top:10px;font:12px/1.5 Inter,Arial,sans-serif}
+.discussion-details label {font-weight:600;color:var(--navy)}
+.discussion-details textarea {display:block;width:100%;resize:vertical;margin:6px 0 0;min-height:80px}
+.legacy-decision-note {font-size:11px;color:var(--muted)}
+.issue-conflicts {color:#9b2720;font:11px/1.5 Inter,Arial,sans-serif;margin:8px 0 0}
+.review-print-note {font:8.5pt/1.5 Inter,Arial,sans-serif;border-left:2px solid var(--navy);
+ padding:6pt 9pt;margin:8pt 0;white-space:pre-wrap;break-inside:avoid}
+.toolbar-navigation {display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.issue-navigation {border-top:2px solid var(--navy);border-bottom:1px solid var(--rule);
+ margin:22px 0 24px;padding:14px 0;font-family:Inter,Arial,sans-serif}
+.issue-navigation h2 {font-size:18px;margin:0 0 6px}
+.index-legend {color:var(--muted);font-size:12px;margin:0 0 8px}
+.issue-index-link {display:flex;gap:10px;align-items:baseline;width:100%;text-align:left;
+ border:0;border-radius:0;border-bottom:1px solid var(--rule);padding:8px;
+ background:white;cursor:pointer;font:400 14px/1.45 Inter,Arial,sans-serif;color:var(--ink)}
+.issue-index-link:last-child {border-bottom:0}
+.issue-index-link:hover {background:#f3f5f8}
+.issue-index-link .index-title {flex:1}
+.index-number {font-weight:600;color:var(--navy);min-width:18px}
+.review-toolbar button:disabled {cursor:default;opacity:.5}
+.wording-heading {display:flex;gap:12px;align-items:baseline;justify-content:space-between;flex-wrap:wrap}
+.review-ready .wording-tools {display:flex;gap:7px;flex-wrap:wrap}
+.wording-tools button {font:600 12px/1.4 Inter,Arial,sans-serif;border:1px solid #aeb9ca;
+ border-radius:3px;padding:6px 9px;background:white;color:var(--navy);cursor:pointer}
+.wording-tools button:hover {background:#edf2f8}
+.wording-tools button[aria-pressed="true"] {background:var(--navy);color:white;border-color:var(--navy)}
+.wording-focus-note {font:12px/1.5 Inter,Arial,sans-serif;color:var(--muted);margin:0 0 8px}
+.wording-focus-note:empty {display:none}
+.comparison-current {display:none}
+.proposal-group {margin:9px 0;break-inside:avoid}
+[tabindex="-1"]:focus-visible {outline:2px solid #2e69a7;outline-offset:4px}
+@media screen {
+ body {font-size:16px;line-height:1.55}
+ h1 {font-size:32px}h2 {font-size:21px}h3 {font-size:17px}h4 {font-size:15px}
+ .meta,.where {font-size:13px}.legend {font-size:12px}.label {font-size:12px}
+ .source {font-size:12px}.pill {font-size:10px}.condition {font-size:13px;padding:8px 10px}
+ .options {font-size:15px;line-height:1.5}.option strong {font-size:15px}
+ .steps {font-size:14px;line-height:1.6}
+ table.data {font-size:15px;line-height:1.4}table.data th {font-size:13px}
+ .tablenote,.value-note {font-size:13px}
+ .review-toolbar {font-size:13px}.toolbar-heading strong {font-size:16px}
+ .review-progress,.review-message {font-size:12px}
+ .review-toolbar button {font-size:13px;min-height:36px;padding:8px 11px}
+ .proposal-controls {font-size:13px}.proposal-controls button {font-size:12px;padding:6px 9px}
+ .clear-option {font-size:12px;padding:5px 8px}
+ .discussion-details,.discussion-details textarea {font-size:14px}
+ .proposal-group.side-by-side .comparison-grid {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}
+ .proposal-group.side-by-side .comparison-current {display:block}
+ .proposal-group.side-by-side .comparison-grid>.context,.proposal-group.side-by-side .comparison-grid>.proposal {margin:0;min-width:0}
+ .proposal-group.side-by-side .proposal-controls {gap:6px}
+ .proposal-group.side-by-side .proposal-controls label {flex-basis:100%}
+}
+[hidden] {display:none!important}
+@media print {
+ html {print-color-adjust:exact;-webkit-print-color-adjust:exact}
+ .interactive-only,.review-ready .interactive-only,.wording-editor {display:none!important}
+ .review-print-note:not(:empty) {display:block}
+ .proposed-text[hidden] {display:block!important}
+ .choice {display:inline-flex!important;align-items:center;justify-content:center;
+  vertical-align:0;box-sizing:border-box;color:#000;border-color:#000}
+ .option.selected .choice::after {content:'●';font:6pt/1 Arial,sans-serif;color:#000}
+ .option.selected {background:#eaf1fb;border:1.5pt solid #000;border-left-width:3pt}
+ .option.selected .print-selection-label {display:inline-block;margin-left:7pt;
+  padding:1pt 4pt;border:1pt solid #000;color:#000;font:700 7.5pt/1.3 Inter,Arial,sans-serif}
+ .review-ready .discussion-option.selected,.discussion-option.selected {display:block!important}
+ .discussion-radio,.discussion-details {display:none!important}
+ .option-section:has(.option.selected) {display:block!important}
+ .proposal-group[hidden] {display:block!important}
+ .comparison-current {display:none!important}
+ .comparison-grid {display:block!important}
+ .proposal-group {margin:0;break-inside:auto}
+ .wording-heading {display:block}
+}
+@media(max-width:650px) {
+ .review-toolbar {top:0;padding:10px;gap:9px}
+ .toolbar-heading,.toolbar-actions,.review-message {flex-basis:100%}
+ .review-toolbar button {flex:1;padding:8px 5px}
+ .discussion-details textarea,.wording-editor {font-size:16px}
+}

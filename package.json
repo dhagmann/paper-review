@@ -1,0 +1,14 @@
+{
+  "name": "paper-review-skill",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shared Codex and Claude Code skill for actionable manuscript reviews",
+  "license": "MIT",
+  "engines": {"node": ">=22"},
+  "scripts": {
+    "test": "node tests/review-workflow.cjs",
+    "sample": "python3 scripts/build_report.py assets/example-review.json --output-dir examples --basename sample-report",
+    "sample:counts": "python3 examples/reproduce-sample.py"
+  },
+  "devDependencies": {"playwright": "1.65.0"}
+}
